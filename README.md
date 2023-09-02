@@ -1,7 +1,6 @@
 # exact_space_assignment
 
 # Leve 1
-# Log File Truncation and Security Script
 
 ## Description
 
