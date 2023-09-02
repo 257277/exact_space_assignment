@@ -13,8 +13,11 @@ This Bash script is designed to find the longest log file with a ".log" extensio
 
 2. Open a terminal and navigate to the directory where the script is located.
 
-3. Make the script executable
-     ./
+3. Make the script executable.
+     ./Logest_file.sh
+
+
+
 
 
 
