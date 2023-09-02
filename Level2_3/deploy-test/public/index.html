@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1>Form</h1>
+            <textarea rows="20" cols="50" class="tbx"></textarea><br>
+            <button class="sbtn">Submit</button>
+        </div>
+        <div>
+            <h1>Level 2 Output</h1>
+            <div class="level1">
+
+            </div>
+        </div>
+        <div>
+            <h1>Level 3 output</h1>
+            <div class="level2"></div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector(".sbtn").addEventListener("click", async (e) => {
+        e.preventDefault();
+        const jsonData = document.querySelector(".tbx").value;
+        console.log(jsonData)
+        try {
+            const response = await fetch(`/submit`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ jsonData })
+            });
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data);
+                document.querySelector(".level1").innerText = JSON.stringify(data)
+                let arr = [];
+                for (let x in data) {
+                    arr.push(`<div class="dt">
+                        ${x}
+                        <span>${data[x]}</span>
+                    </div>`)
+                }
+                document.querySelector(".level2").innerHTML = arr.join("");
+            } else {
+                alert("Invalid JSON data");
+            }
+        } catch (error) {
+            alert("Error:", error);
+
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.container>div {
+    border: 5px solid rgb(228, 227, 227);
+    width: 32%;
+
+}
+
+/* .tbx {
+    font-size: 20px;
+} */
+
+.level1 {
+    font-size: 20px;
+}
+
+.dt {
+    margin: 40px;
+    font-size: 20px;
+}
+
+span {
+    border: 2px solid black;
+    padding: 10px;
+
+
+}
