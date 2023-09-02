@@ -10,7 +10,9 @@ Before you begin, ensure you have the following dependencies installed:
 - [Express.js](https://expressjs.com/)
 - [CORS](https://www.npmjs.com/package/cors)
 
-Run the files:
--Frontend:http://localhost:3000/
--Backend:node index.js
+###Run the files:
+
+ Frontend:http://localhost:3000/
+
+ Backend:node index.js
 
